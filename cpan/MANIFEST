@@ -5,7 +5,11 @@
 .gitignore
 Build.PL
 Changes
+LICENSE
 MANIFEST
+META.json
+META.yml
+README
 config/Marpa/HTML/Build_Me.pm
 config/Marpa/HTML/Config.pm
 config/Marpa/HTML/License.pm
@@ -32,5 +36,3 @@ t/score.t
 t/synopsis.t
 t/tang.t
 t/test.html
-META.yml
-META.json
