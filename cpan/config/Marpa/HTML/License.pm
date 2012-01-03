@@ -109,7 +109,7 @@ my %files_by_type = (
     ,    # not source, and not clear how to add license at top
     'META.yml' => sub {;}
     ,    # not source, and not clear how to add license at top
-    'lib/Marpa/HTML/Test/capture-stderr' => sub {;},
+    'config/Marpa/Test/capture-stderr' => sub {;},
     'script/html_fmt'                   => \&license_problems_in_perl_file,
     'script/html_score'                 => \&license_problems_in_perl_file,
     't/no_tang.html'                    => sub {;},

@@ -1,12 +1,36 @@
+# This software is copyright (c) 2011 by Jeffrey Kegler
+# This is free software; you can redistribute it and/or modify it
+# under the same terms as the Perl 5 programming language system
+# itself.
+.gitignore
 Build.PL
 Changes
+MANIFEST
+config/Marpa/HTML/Build_Me.pm
+config/Marpa/HTML/Config.pm
+config/Marpa/HTML/License.pm
+config/Marpa/Test.pm
+config/Marpa/Test/Util.pm
+config/Marpa/Test/capture-stderr
 lib/Marpa/HTML/XS.pm
-MANIFEST			This list of files
+lib/Marpa/HTML/XS/.gitignore
+script/html_fmt
+script/html_score
 t/00-load.t
 t/copy.t
 t/examples.t
 t/fmt.t
+t/fmt_t_data/expected1.html
+t/fmt_t_data/expected2.html
+t/fmt_t_data/input1.html
+t/fmt_t_data/input2.html
+t/fmt_t_data/score_expected1.html
+t/fmt_t_data/score_expected2.html
+t/no_tang.html
 t/parse.t
 t/score.t
 t/synopsis.t
 t/tang.t
+t/test.html
+META.yml
+META.json

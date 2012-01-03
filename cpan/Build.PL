@@ -47,7 +47,6 @@ my $build = Marpa::HTML::Build_Me->new(
         },
     },
     create_readme      => 0,
-    create_makefile_pl => 'small',
     test_files         => [ map { glob $_ } qw(t/*.t) ],
 );
 
