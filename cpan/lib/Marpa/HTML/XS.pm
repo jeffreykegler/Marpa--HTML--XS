@@ -21,8 +21,6 @@ $STRING_VERSION = $VERSION;
 
 use Marpa::HTML::XS::Version;
 
-say join ' ', __FILE__, __LINE__;
-
 use Marpa::XS 1.002000;
 use Marpa::HTML 0.112000;
 Carp::croak("Marpa::HTML did not load Marpa::XS")

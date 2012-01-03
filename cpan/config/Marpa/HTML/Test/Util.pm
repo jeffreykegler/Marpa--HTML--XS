@@ -43,7 +43,7 @@ sub build_command_line {
         @args = map { quotemeta $_ } @args;
     }
 
-    return "$EXECUTABLE_NAME -Ilib @args";
+    return "$EXECUTABLE_NAME -Ilib -MMarpa::HTML::XS @args";
     # capture-stderr drops core on my Mac OS Tiger laptop
     # return
         # "$EXECUTABLE_NAME -Ilib ./lib/Marpa/HTML/Test/capture-stderr $catcherr_file @args";
@@ -52,6 +52,10 @@ sub build_command_line {
 sub run_command {
     my ( $command, @args ) = @_;
 
+    my ($volume, $directories, $file) = File::Spec->splitpath($command);
+    my @dirs = File::Spec->splitdir($directories);
+    $directories = File::Spec->catdir('config', @dirs);
+    $command = File::Spec->catpath($volume, $directories, $file);
     my ( $stdout, $stderr ) = run_with_stderr( $command, @args );
 
     Test::More::is( $stderr, q{},

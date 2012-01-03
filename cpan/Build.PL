@@ -38,7 +38,6 @@ my $build = Marpa::HTML::Build_Me->new(
     recommends         => \%recommends,
     build_requires     => \%build_requires,
     configure_requires => \%configure_requires,
-    script_files       => [ 'script/html_fmt', 'script/html_score', ],
     PL_files   => {},    # workaround Module::Build bug
     meta_merge => {
         resources => {
@@ -46,6 +45,21 @@ my $build = Marpa::HTML::Build_Me->new(
                 'git://github.com/jeffreykegler/Marpa--HTML--XS.git',
         },
     },
+        no_index => {
+            directory => [qw( config script )],
+            namespace => [
+                'Marpa::HTML::Internal', 'Marpa::HTML::Test',
+            ],
+            package => [
+
+                # not public, at least for now
+                qw(Marpa::HTML::Offset Marpa::HTML::Test Marpa::HTML::Display ),
+
+                # never intended to see the light of day
+                qw(Marpa::HTML::Internal),
+
+            ],
+        },
     create_readme      => 0,
     test_files         => [ map { glob $_ } qw(t/*.t) ],
 );
