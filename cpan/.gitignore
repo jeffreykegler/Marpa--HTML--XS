@@ -1,0 +1,12 @@
+/Build
+/MYMETA[.]json
+/MYMETA[.]yml
+/Makefile
+/Marpa-HTML-XS-[0-9].[0-9][0-9][0-9][0-9][0-9][0-9].tar.gz
+/Marpa-HTML-XS-[0-9].[0-9][0-9][0-9][0-9][0-9][0-9]/
+/Marpa-HTML-XS-[0-9].[0-9][0-9][0-9]_[0-9][0-9][0-9].tar.gz
+/Marpa-HTML-XS-[0-9].[0-9][0-9][0-9]_[0-9][0-9][0-9]/
+/_build/
+/blib/
+/pod2htmd.tmp
+/pod2htmi.tmp

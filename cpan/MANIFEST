@@ -1,0 +1,13 @@
+Build.PL
+Changes
+lib/Marpa/HTML/XS.pm
+MANIFEST			This list of files
+shim/Marpa/HTML.pl
+t/00-load.t
+t/copy.t
+t/examples.t
+t/fmt.t
+t/parse.t
+t/score.t
+t/synopsis.t
+t/tang.t
