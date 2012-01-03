@@ -44,7 +44,8 @@ C<use Marpa::HTML::XS;>
 
 This module loads L<Marpa::HTML> with L<Marpa::XS>,
 or fails.
-Its documentation on is with those two modules.
+The documentation on how to use each of 
+those two modules is part of their distributions.
 
 L<Marpa::HTML> by itself own chooses between L<Marpa::XS> and L<Marpa::PP>.
 L<Marpa::HTML> runs L<Marpa::XS> if possible, L<Marpa::PP> otherwise.
