@@ -25,6 +25,7 @@ my $build = Module::Build->new(
         'Marpa::HTML' => 0.112000,
         'Marpa::XS'   => 1.002000,
     },
+    script_files => [ 'script/html_fmt', 'script/html_score', ],
     build_requires => { 'Module::Build' => 0.3800 },
     PL_files       => {},             # workaround Module::Build bug
     meta_merge     => {
