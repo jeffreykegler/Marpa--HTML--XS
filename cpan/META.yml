@@ -13,14 +13,26 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Marpa-HTML-XS
+no_index:
+  directory:
+    - config
+    - script
+  namespace:
+    - Marpa::HTML::Internal
+    - Marpa::HTML::Test
+  package:
+    - Marpa::HTML::Offset
+    - Marpa::HTML::Test
+    - Marpa::HTML::Display
+    - Marpa::HTML::Internal
 provides:
   Marpa::HTML::XS:
     file: lib/Marpa/HTML/XS.pm
-    version: 0.001_000
+    version: 0.001_001
 requires:
-  Marpa::HTML: 0
+  Marpa::HTML: 0.112000
   Marpa::XS: 1.002000
   perl: 5.01
 resources:
   repository: git://github.com/jeffreykegler/Marpa--HTML--XS.git
-version: 0.001_000
+version: 0.001_001
