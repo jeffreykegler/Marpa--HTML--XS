@@ -42,8 +42,9 @@ C<use Marpa::HTML::XS;>
 
 =head1 DESCRIPTION
 
-This module uses L<Marpa::HTML> and L<Marpa::XS>.
-The documentation is with those two modules.
+This module loads L<Marpa::HTML> with L<Marpa::XS>,
+or fails.
+Its documentation on is with those two modules.
 
 L<Marpa::HTML> by itself own chooses between L<Marpa::XS> and L<Marpa::PP>.
 L<Marpa::HTML> runs L<Marpa::XS> if possible, L<Marpa::PP> otherwise.
@@ -53,8 +54,8 @@ the cpantesters almost always run with L<Marpa::PP>.
 This makes it difficult for users to determine if
 an XS-powered L<Marpa::HTML> has been tested on their system.
 The lop-sided testing of L<Marpa::HTML>
-is also a major quality assurance for both
-L<Marpa::HTML> and L<Marpa::XS>.
+is also a major quality assurance issue
+for both L<Marpa::HTML> and L<Marpa::XS>.
 This module redresses the balance.
 
 =head1 AUTHOR
