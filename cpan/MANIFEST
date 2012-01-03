@@ -2,7 +2,6 @@ Build.PL
 Changes
 lib/Marpa/HTML/XS.pm
 MANIFEST			This list of files
-shim/Marpa/HTML.pl
 t/00-load.t
 t/copy.t
 t/examples.t

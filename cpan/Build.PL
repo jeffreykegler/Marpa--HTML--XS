@@ -13,22 +13,34 @@ use English qw( -no_match_vars );
 
 use Module::Build;
 
-push @INC, File::Spec->catdir('shim');
+use lib File::Spec->catdir('config');
+use Marpa::HTML::Build_Me;
+use Marpa::HTML::Config;
 
-my $build = Module::Build->new(
-    dist_name     => 'Marpa-HTML-XS',
-    module_name   => 'Marpa::HTML::XS',
-    dist_author   => 'Jeffrey Kegler',
-    dist_abstract => 'XS-only HTML Parsing',
-    requires      => {
-        perl          => 5.010,
-        'Marpa::HTML' => 0.112000,
-        'Marpa::XS'   => 1.002000,
-    },
-    script_files => [ 'script/html_fmt', 'script/html_score', ],
-    build_requires => { 'Module::Build' => 0.3800 },
-    PL_files       => {},             # workaround Module::Build bug
-    meta_merge     => {
+my %build_requires =
+    map { ( $_, $Marpa::HTML::VERSION_FOR_CONFIG{$_} ) }
+    qw( Test::More );
+my %configure_requires =
+    map { ( $_, $Marpa::HTML::VERSION_FOR_CONFIG{$_} ) }
+    qw( Module::Build );
+my %requires =
+    map { ( $_, $Marpa::HTML::VERSION_FOR_CONFIG{$_} ) }
+    qw( Marpa::XS Marpa::HTML );
+my %recommends = ();
+$requires{perl} = 5.010;
+
+my $build = Marpa::HTML::Build_Me->new(
+    dist_name          => 'Marpa-HTML-XS',
+    module_name        => 'Marpa::HTML::XS',
+    dist_author        => 'Jeffrey Kegler',
+    dist_abstract      => 'XS-only HTML Parsing',
+    requires           => \%requires,
+    recommends         => \%recommends,
+    build_requires     => \%build_requires,
+    configure_requires => \%configure_requires,
+    script_files       => [ 'script/html_fmt', 'script/html_score', ],
+    PL_files   => {},    # workaround Module::Build bug
+    meta_merge => {
         resources => {
             repository =>
                 'git://github.com/jeffreykegler/Marpa--HTML--XS.git',

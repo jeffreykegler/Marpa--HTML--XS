@@ -19,9 +19,13 @@ $STRING_VERSION = $VERSION;
     $VERSION = eval $VERSION;
 }
 
+use Marpa::HTML::XS::Version;
+
+say join ' ', __FILE__, __LINE__;
+
 use Marpa::XS 1.002000;
-use Marpa::HTML 1.112000;
+use Marpa::HTML 0.112000;
 Carp::croak("Marpa::HTML did not load Marpa::XS")
-    if Marpa::HTML::MARPA_MODULE ne 'Marpa::XS';
+    if $Marpa::HTML::MARPA_MODULE ne 'Marpa::XS';
 
 1;

@@ -15,5 +15,6 @@
 ^blib
 ^errs$
 ^junk$
+^lib/Marpa/HTML/XS/Version[.]pm
 ^pod2htmd.tmp
 ^pod2htmi.tmp
